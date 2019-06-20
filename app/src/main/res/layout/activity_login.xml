@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLayout">
+
+    <ImageView
+        android:id="@+id/iv_logo_login"
+        style="@style/ImageView"
+        android:layout_width="@dimen/image_logo"
+        android:layout_height="@dimen/image_logo"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo"/>
+
+    <LinearLayout
+        style="@style/LineContent"
+        android:layout_marginTop="@dimen/very_large_margin"
+        android:orientation="vertical"
+        android:layout_below="@id/iv_logo_login"
+        android:background="@android:color/white">
+
+        <EditText
+            style="@style/EditTextForm"
+            android:layout_marginTop="@dimen/very_huge_margin"
+            android:inputType="text"
+            android:hint="@string/email"/>
+
+        <EditText
+            style="@style/EditTextForm"
+            android:inputType="textPassword"
+            android:hint="@string/password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/very_huge_margin"
+            android:layout_marginRight="@dimen/very_huge_margin"
+            android:layout_marginTop="@dimen/very_large_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/large_marge"
+            android:paddingBottom="@dimen/large_marge"
+            android:text="@string/login" />
+
+        <LinearLayout
+            style="@style/TextView"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_marginRight="@dimen/medium_margin"
+                android:text="@string/lupa_password"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                style="@style/TextView"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/bantuan"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextView"
+        android:paddingRight="@dimen/very_large_margin"
+        android:paddingLeft="@dimen/very_large_margin"
+        android:paddingTop="@dimen/medium_margin"
+        android:paddingBottom="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_below="@id/iv_logo_login"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:text="@string/login"
+        android:textSize="@dimen/medium_text"
+        android:textStyle="bold"
+        android:background="@android:color/holo_blue_bright"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="@dimen/large_marge"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:text="@string/belum_punya_akun" />
+
+        <TextView
+            style="@style/TextView"
+            android:text="@string/daftar"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/very_large_margin"
+        android:layout_height="@dimen/very_large_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:src="@android:color/holo_blue_dark"/>
+
+</RelativeLayout>
