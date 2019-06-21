@@ -8,4 +8,6 @@
     <string name="belum_punya_akun">Belum Punya Akun?</string>
     <string name="daftar">Daftar</string>
     <string name="email">Email</string>
+    <string name="pemberi_kerja">Pemberi Kerja</string>
+    <string name="pencari_kerja">Pencari Kerja</string>
 </resources>
