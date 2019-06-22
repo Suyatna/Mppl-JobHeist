@@ -117,16 +117,6 @@
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/iv_login_admin"
-                android:layout_width="@dimen/very_large_margin"
-                android:layout_height="@dimen/very_large_margin"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="@dimen/medium_margin"
-                android:layout_marginBottom="@dimen/medium_margin"
-                android:src="@android:color/holo_blue_dark"/>
-
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

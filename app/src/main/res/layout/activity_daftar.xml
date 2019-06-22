@@ -51,11 +51,10 @@
                     android:layout_marginLeft="@dimen/very_huge_margin"
                     android:layout_marginRight="@dimen/very_huge_margin"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/very_large_margin"
                     android:paddingTop="@dimen/large_marge"
                     android:paddingBottom="@dimen/large_marge"
                     android:text="@string/pemberi_kerja" />
-
 
             </LinearLayout>
 
