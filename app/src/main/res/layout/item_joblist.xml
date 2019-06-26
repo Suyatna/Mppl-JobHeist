@@ -8,11 +8,10 @@
     android:padding="@dimen/activity_vertical_margin"
     android:orientation="horizontal">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/civ_item_joblist_photo"
         android:layout_width="@dimen/image_medium"
-        android:layout_height="@dimen/image_medium"
-        android:background="@android:color/holo_blue_light"/>
+        android:layout_height="@dimen/image_medium" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,12 +1,15 @@
 package com.pejuangif.mppljobheist.jobList;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.model.JobLists;
 
@@ -15,11 +18,13 @@ import java.util.ArrayList;
 public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListHolder> {
 
     private final ArrayList<JobLists> mJobListArray;
+    private Context context;
 
     private ArrayList<JobLists> mGetScoutRegimentArray() {return  mJobListArray;}
 
-    public JobListAdapter(ArrayList<JobLists> mJobListArray) {
+    public JobListAdapter(ArrayList<JobLists> mJobListArray, Context context) {
         this.mJobListArray = mJobListArray;
+        this.context = context;
     }
 
     @NonNull
@@ -33,6 +38,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListH
     public void onBindViewHolder(@NonNull JobListHolder jobListHolder, int i) {
         final JobLists jobLists = mGetScoutRegimentArray().get(i);
 
+        Glide.with(context).load(jobLists.getImageurl()).into(jobListHolder.ivPhoto);
         jobListHolder.tvTitle.setText(jobLists.getTitle());
         jobListHolder.tvAuthor.setText(jobLists.getAuthor());
     }
@@ -44,6 +50,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListH
 
     public class JobListHolder extends RecyclerView.ViewHolder {
 
+        final ImageView ivPhoto;
         final TextView tvTitle;
         final TextView tvAuthor;
 
@@ -51,6 +58,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListH
         JobListHolder(@NonNull View itemView) {
             super(itemView);
 
+            ivPhoto = itemView.findViewById(R.id.civ_item_joblist_photo);
             tvTitle = itemView.findViewById(R.id.tv_item_joblist_title);
             tvAuthor = itemView.findViewById(R.id.tv_item_joblist_author);
         }

@@ -38,7 +38,7 @@ public class JobListActivity extends AppCompatActivity {
         baseApiService = RetrofilClient.getClient().create(BaseApiService.class);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Riwayar Pencari Kerja");
+        getSupportActionBar().setTitle("Riwayat Pencari Kerja");
 
         mShowJobLists();
     }
@@ -50,7 +50,7 @@ public class JobListActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<JobListData> call, Response<JobListData> response) {
                 ArrayList<JobLists> jobListsArrayList = Objects.requireNonNull(response.body()).getJobListsArray();
-                mAdapter = new JobListAdapter(jobListsArrayList);
+                mAdapter = new JobListAdapter(jobListsArrayList, JobListActivity.this);
                 mRecyclerView.setAdapter(mAdapter);
             }
 
