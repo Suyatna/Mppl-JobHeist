@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.admin.AdminHomeActivity;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
-import com.pejuangif.mppljobheist.model.User;
+import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.apihelper.UtilsApi;
 import com.pejuangif.mppljobheist.daftar.DaftarActivity;
 
@@ -65,25 +65,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void requestLogin() {
 
         baseApiService.loginRequest(email.getText().toString(), password.getText().toString())
-                .enqueue(new Callback<User>() {
+                .enqueue(new Callback<Users>() {
                     @Override
-                    public void onResponse(Call<User> call, Response<User> response) {
+                    public void onResponse(Call<Users> call, Response<Users> response) {
                         if (response.isSuccessful()) {
 
-                            User userData = response.body();
-                            System.out.println(userData.getId());
-                            System.out.println(userData.getName());
-                            System.out.println(userData.getEmail());
-                            System.out.println(userData.getGenerate_token());
+                            Users usersData = response.body();
+                            System.out.println(usersData.getId());
+                            System.out.println(usersData.getName());
+                            System.out.println(usersData.getEmail());
+                            System.out.println(usersData.getGenerate_token());
 
-                            User user = new User();
-                            user.setId(userData.getId());
-                            user.setName(userData.getName());
-                            user.setEmail(userData.getEmail());
-                            user.setGenerate_token(userData.getGenerate_token());
+                            Users users = new Users();
+                            users.setId(usersData.getId());
+                            users.setName(usersData.getName());
+                            users.setEmail(usersData.getEmail());
+                            users.setGenerate_token(usersData.getGenerate_token());
 
                             Intent intent = new Intent(context, AdminHomeActivity.class);
-                            intent.putExtra(AdminHomeActivity.EXTRA_USERS, user);
+                            intent.putExtra(AdminHomeActivity.EXTRA_USERS, users);
                             startActivity(intent);
                         }
                         else
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
 
                     @Override
-                    public void onFailure(Call<User> call, Throwable t) {
+                    public void onFailure(Call<Users> call, Throwable t) {
                             Toast.makeText(context, "Koneksi Internet Bermasalah", Toast.LENGTH_SHORT).show();
                     }
                 });

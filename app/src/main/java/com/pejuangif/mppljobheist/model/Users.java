@@ -3,13 +3,13 @@ package com.pejuangif.mppljobheist.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class User implements Parcelable {
+public class Users implements Parcelable {
     private int id;
     private String name;
     private String email;
     private String generate_token;
 
-    public User() {
+    public Users() {
 
     }
 
@@ -59,22 +59,22 @@ public class User implements Parcelable {
         dest.writeString(this.generate_token);
     }
 
-    protected User(Parcel in) {
+    protected Users(Parcel in) {
         this.id = in.readInt();
         this.name = in.readString();
         this.email = in.readString();
         this.generate_token = in.readString();
     }
 
-    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+    public static final Parcelable.Creator<Users> CREATOR = new Parcelable.Creator<Users>() {
         @Override
-        public User createFromParcel(Parcel source) {
-            return new User(source);
+        public Users createFromParcel(Parcel source) {
+            return new Users(source);
         }
 
         @Override
-        public User[] newArray(int size) {
-            return new User[size];
+        public Users[] newArray(int size) {
+            return new Users[size];
         }
     };
 }

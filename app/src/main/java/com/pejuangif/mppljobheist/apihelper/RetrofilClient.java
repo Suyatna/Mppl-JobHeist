@@ -9,7 +9,7 @@ public class RetrofilClient {
 
     private static Retrofit retrofit = null;
 
-    public static Retrofit getClient(String baseUrl) {
+    public static Retrofit getClient() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -18,7 +18,7 @@ public class RetrofilClient {
         if (retrofit == null) {
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl(baseUrl)
+                    .baseUrl("https://mpplsample-api.herokuapp.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
                     .build();
