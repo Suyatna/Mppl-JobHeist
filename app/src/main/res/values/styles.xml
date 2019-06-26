@@ -8,4 +8,50 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ImageView">
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    
+    <style name="LineContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="EditTextForm">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/very_large_margin</item>
+        <item name="android:layout_marginRight">@dimen/very_large_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextDesc">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextDesc.Field">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">@color/colorSubTitle</item>
+    </style>
+
+    <style name="TextDesc.Value">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="large_marge">18dp</dimen>
+    <dimen name="very_large_margin">32dp</dimen>
+    <dimen name="very_huge_margin">64dp</dimen>
+
+    <dimen name="medium_text">18sp</dimen>
+
+    <dimen name="image_logo">125dp</dimen>
+    <dimen name="image_medium">60dp</dimen>
+</resources>
