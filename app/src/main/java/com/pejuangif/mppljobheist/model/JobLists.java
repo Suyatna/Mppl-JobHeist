@@ -132,7 +132,7 @@ public class JobLists implements Parcelable {
         dest.writeString(this.uri_form);
     }
 
-    protected JobLists(Parcel in) {
+    private JobLists(Parcel in) {
         this.id = in.readInt();
         this.title = in.readString();
         this.imageurl = in.readString();

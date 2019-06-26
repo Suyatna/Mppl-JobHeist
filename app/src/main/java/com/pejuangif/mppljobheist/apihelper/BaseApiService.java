@@ -1,7 +1,6 @@
 package com.pejuangif.mppljobheist.apihelper;
 
 import com.pejuangif.mppljobheist.model.JobListData;
-import com.pejuangif.mppljobheist.model.JobLists;
 import com.pejuangif.mppljobheist.model.Users;
 
 import retrofit2.Call;

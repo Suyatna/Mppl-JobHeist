@@ -59,7 +59,7 @@ public class Users implements Parcelable {
         dest.writeString(this.generate_token);
     }
 
-    protected Users(Parcel in) {
+    private Users(Parcel in) {
         this.id = in.readInt();
         this.name = in.readString();
         this.email = in.readString();
