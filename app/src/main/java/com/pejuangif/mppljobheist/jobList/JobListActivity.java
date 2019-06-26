@@ -1,10 +1,9 @@
-package com.pejuangif.mppljobheist.JobList;
+package com.pejuangif.mppljobheist.jobList;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.pejuangif.mppljobheist.R;
@@ -22,12 +21,10 @@ import retrofit2.Response;
 
 public class JobListActivity extends AppCompatActivity {
 
-    BaseApiService baseApiService;
+    private BaseApiService baseApiService;
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    public static JobListActivity ma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +33,9 @@ public class JobListActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.rv_activity_joblist);
 
-        mLayoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         baseApiService = RetrofilClient.getClient().create(BaseApiService.class);
-        ma = this;
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Riwayar Pencari Kerja");
@@ -47,13 +43,13 @@ public class JobListActivity extends AppCompatActivity {
         mShowJobLists();
     }
 
-    void mShowJobLists() {
+    private void mShowJobLists() {
 
         Call<JobListData> jobListDataCall = baseApiService.jobListRequest();
         jobListDataCall.enqueue(new Callback<JobListData>() {
             @Override
             public void onResponse(Call<JobListData> call, Response<JobListData> response) {
-                ArrayList<JobLists> jobListsArrayList = response.body().getJobListsArray();
+                ArrayList<JobLists> jobListsArrayList = Objects.requireNonNull(response.body()).getJobListsArray();
                 mAdapter = new JobListAdapter(jobListsArrayList);
                 mRecyclerView.setAdapter(mAdapter);
             }

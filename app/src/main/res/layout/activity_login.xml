@@ -15,7 +15,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/iv_logo_login"
@@ -23,7 +23,8 @@
                 android:layout_width="@dimen/image_logo"
                 android:layout_height="@dimen/image_logo"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/logo"/>
+                android:src="@drawable/logo"
+                android:contentDescription="@string/logo" />
 
             <LinearLayout
                 android:id="@+id/line_form_login"
@@ -37,14 +38,17 @@
                     android:id="@+id/et_login_email"
                     style="@style/EditTextForm"
                     android:layout_marginTop="@dimen/very_huge_margin"
-                    android:inputType="text"
-                    android:hint="@string/email"/>
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:importantForAutofill="no"
+                    tools:targetApi="o" />
 
                 <EditText
                     android:id="@+id/et_login_password"
                     style="@style/EditTextForm"
                     android:inputType="textPassword"
-                    android:hint="@string/password"/>
+                    android:hint="@string/password"
+                    android:importantForAutofill="no" />
 
                 <Button
                     android:id="@+id/btn_login"
@@ -66,7 +70,7 @@
                     <TextView
                         android:id="@+id/tv_login_lupapassword"
                         style="@style/TextView"
-                        android:layout_marginRight="@dimen/medium_margin"
+                        android:layout_marginEnd="@dimen/medium_margin"
                         android:text="@string/lupa_password"
                         android:textColor="@android:color/holo_blue_dark" />
 
@@ -106,7 +110,7 @@
 
                 <TextView
                     style="@style/TextView"
-                    android:layout_marginRight="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/medium_margin"
                     android:text="@string/belum_punya_akun" />
 
                 <TextView
