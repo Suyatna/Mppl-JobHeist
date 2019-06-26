@@ -13,31 +13,8 @@ public class JobListData {
     @SerializedName("message")
     private String message;
 
-    public JobListData() {
-
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public ArrayList<JobLists> getJobListsArray() {
         return jobListsArray;
     }
 
-    public void setJobListsArray(ArrayList<JobLists> jobListsArray) {
-        this.jobListsArray = jobListsArray;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }

@@ -19,28 +19,30 @@ import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.apihelper.UtilsApi;
 import com.pejuangif.mppljobheist.daftar.DaftarActivity;
 
+import java.util.Objects;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvLoginDaftar;
-    EditText email, password;
-    Button btnLogin;
+    private EditText email;
+    private EditText password;
+    private Button btnLogin;
 
-    Context context;
-    BaseApiService baseApiService;
+    private Context context;
+    private BaseApiService baseApiService;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        tvLoginDaftar = findViewById(R.id.tv_login_daftar);
+        TextView tvLoginDaftar = findViewById(R.id.tv_login_daftar);
         tvLoginDaftar.setOnClickListener(this);
 
         email = findViewById(R.id.et_login_email);
@@ -71,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if (response.isSuccessful()) {
 
                             Users usersData = response.body();
-                            System.out.println(usersData.getId());
+                            System.out.println(Objects.requireNonNull(usersData).getId());
                             System.out.println(usersData.getName());
                             System.out.println(usersData.getEmail());
                             System.out.println(usersData.getGenerate_token());
