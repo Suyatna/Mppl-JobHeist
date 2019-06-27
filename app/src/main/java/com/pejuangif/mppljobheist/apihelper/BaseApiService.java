@@ -1,6 +1,7 @@
 package com.pejuangif.mppljobheist.apihelper;
 
 import com.pejuangif.mppljobheist.model.JobListData;
+import com.pejuangif.mppljobheist.model.PencariPekerjaanData;
 import com.pejuangif.mppljobheist.model.Users;
 
 import retrofit2.Call;
@@ -17,4 +18,7 @@ public interface BaseApiService {
 
     @GET("jobs/")
     Call<JobListData> jobListRequest();
+
+    @GET("pencariKerja")
+    Call<PencariPekerjaanData> pencariPekerjaanRequest();
 }
