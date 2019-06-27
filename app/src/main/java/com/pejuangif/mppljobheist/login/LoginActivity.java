@@ -15,9 +15,9 @@ import android.widget.Toast;
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.admin.AdminHomeActivity;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
-import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.apihelper.UtilsApi;
 import com.pejuangif.mppljobheist.daftar.DaftarActivity;
+import com.pejuangif.mppljobheist.model.Users;
 
 import java.util.Objects;
 
@@ -85,10 +85,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             users.setGenerate_token(usersData.getGenerate_token());
 
                             Intent intent = new Intent(context, AdminHomeActivity.class);
-                            intent.putExtra(AdminHomeActivity.EXTRA_USERS, users);
-                            startActivity(intent);
+                            intent.putExtra(AdminHomeActivity.EXTRA_ADMIN, users);
+                            context.startActivity(intent);
                         }
                         else
+                            if (response.message().equals("Email tidak ditemukan"))
                             Toast.makeText(context, "Email/Password salah!", Toast.LENGTH_SHORT).show();
                     }
 

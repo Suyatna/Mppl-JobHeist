@@ -9,7 +9,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/civ_item_joblist_photo"
+        android:id="@+id/civ_item_pencarikerja_photo"
         android:layout_width="@dimen/image_medium"
         android:layout_height="@dimen/image_medium" />
 
@@ -22,16 +22,11 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_item_joblist_title"
+            android:id="@+id/tv_item_pencarikerja_title"
             style="@style/TextDesc.Value"
             android:layout_marginBottom="@dimen/medium_margin"
             tools:text="Title"
             android:textSize="@dimen/medium_text"/>
-
-        <TextView
-            android:id="@+id/tv_item_joblist_author"
-            style="@style/TextDesc.Field"
-            tools:text="author"/>
 
     </LinearLayout>
 
