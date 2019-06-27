@@ -20,7 +20,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListH
     private final ArrayList<JobLists> mJobListArray;
     private Context context;
 
-    private ArrayList<JobLists> mGetScoutRegimentArray() {return  mJobListArray;}
+    private ArrayList<JobLists> mGetJobListArray() {return  mJobListArray;}
 
     public JobListAdapter(ArrayList<JobLists> mJobListArray, Context context) {
         this.mJobListArray = mJobListArray;
@@ -36,7 +36,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListH
 
     @Override
     public void onBindViewHolder(@NonNull JobListHolder jobListHolder, int i) {
-        final JobLists jobLists = mGetScoutRegimentArray().get(i);
+        final JobLists jobLists = mGetJobListArray().get(i);
 
         Glide.with(context).load(jobLists.getImageurl()).into(jobListHolder.ivPhoto);
         jobListHolder.tvTitle.setText(jobLists.getTitle());

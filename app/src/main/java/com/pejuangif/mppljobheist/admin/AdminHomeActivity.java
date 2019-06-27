@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.jobList.JobListActivity;
 import com.pejuangif.mppljobheist.model.Users;
+import com.pejuangif.mppljobheist.pencariPekerjaan.PencariPekerjaanActivity;
 
 import java.util.Objects;
 
@@ -18,7 +19,7 @@ public class AdminHomeActivity extends AppCompatActivity implements View.OnClick
 
     public static String EXTRA_ADMIN = "extra-admin";
 
-    LinearLayout linearAdminHomeRiwayat;
+    LinearLayout linearAdminHomeRiwayat, linearAdminHomePencariPekerjaan, linearAdminHomePemberiPekerjaan;
     Context context;
 
     @Override
@@ -29,6 +30,12 @@ public class AdminHomeActivity extends AppCompatActivity implements View.OnClick
         context = this;
         linearAdminHomeRiwayat = findViewById(R.id.linear_admin_home_riwayat);
         linearAdminHomeRiwayat.setOnClickListener(this);
+
+        linearAdminHomePencariPekerjaan = findViewById(R.id.linear_admin_home_pencarikerja);
+        linearAdminHomePencariPekerjaan.setOnClickListener(this);
+
+        linearAdminHomePemberiPekerjaan = findViewById(R.id.linear_admin_home_pemberikerja);
+        linearAdminHomePemberiPekerjaan.setOnClickListener(this);
 
         Users users = getIntent().getParcelableExtra(EXTRA_ADMIN);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -42,6 +49,16 @@ public class AdminHomeActivity extends AppCompatActivity implements View.OnClick
             case R.id.linear_admin_home_riwayat:
                 Intent intent = new Intent(context, JobListActivity.class);
                 context.startActivity(intent);
+                break;
+
+            case R.id.linear_admin_home_pencarikerja:
+                Intent intent1 = new Intent(context, PencariPekerjaanActivity.class);
+                context.startActivity(intent1);
+                break;
+
+            case R.id.linear_admin_home_pemberikerja:
+                Intent intent2 = new Intent(context, PencariPekerjaanActivity.class);
+                context.startActivity(intent2);
                 break;
         }
     }
