@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.pejuangif.mppljobheist.login.LoginActivity;
+import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, PekerjaActivity.class);
         startActivity(intent);
+
     }
 }

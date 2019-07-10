@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_pe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundLayout"
+    tools:context=".pekerja.RegisterPekerjaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_logo_login"
+                style="@style/ImageView"
+                android:layout_width="140dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/foto_profile"
+                android:contentDescription="@string/logo" />
+
+            <LinearLayout
+                android:id="@+id/line_form_daftar"
+                style="@style/LineContent"
+                android:layout_marginTop="@dimen/large_marge"
+                android:orientation="vertical"
+                android:layout_below="@id/iv_logo_login"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/et_daftar_nama_lengkap"
+                    style="@style/EditTextForm"
+                    android:hint="@string/nama_lengkap"/>
+                <TextView
+                    android:id="@+id/et_daftar_email"
+                    style="@style/EditTextForm"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"/>
+                <TextView
+                    android:id="@+id/et_daftar_password"
+                    style="@style/EditTextForm"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"/>
+                <TextView
+                    android:id="@+id/et_daftar_confirm_password"
+                    style="@style/EditTextForm"
+                    android:inputType="textPassword"
+                    android:hint="@string/confirm_password"/>
+                <TextView
+                    android:id="@+id/et_daftar_pendidikan"
+                    style="@style/EditTextForm"
+                    android:hint="@string/pendidikan_terakhir"/>
+                <TextView
+                    android:id="@+id/et_daftar_alamat"
+                    style="@style/EditTextForm"
+                    android:hint="@string/alamat"
+                    android:layout_marginBottom="@dimen/large_marge"/>
+
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_daftar_pencarikerja"
+                android:layout_below="@+id/line_form_daftar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/large_marge"
+                android:paddingBottom="@dimen/large_marge"
+                android:background="@drawable/rounded_shape"
+                android:backgroundTint="#000"
+                android:textColor="#e5e5e5"
+                android:text="Daftar"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

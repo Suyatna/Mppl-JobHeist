@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_logo_login"
+            style="@style/ImageView"
+            android:layout_width="@dimen/image_logo"
+            android:layout_height="@dimen/image_logo"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo" />
+        <TextView
+            android:id="@+id/jobheist"
+            android:layout_width="199dp"
+            android:layout_height="72dp"
+            android:text="@string/jobheist"
+            android:layout_marginTop="-20dp"
+            android:textAppearance="@style/jobheist"
+            android:textStyle="bold"
+            android:gravity="center_horizontal|center_vertical"
+            />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

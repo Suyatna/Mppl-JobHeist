@@ -7,6 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/colorTitle</item>
+    </style>
 
     <style name="ImageView">
         <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
@@ -21,20 +24,28 @@
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
         <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
     </style>
-
-    <style name="EditTextForm">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/very_large_margin</item>
-        <item name="android:layout_marginRight">@dimen/very_large_margin</item>
-        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
-        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    <style name="icon_image_view">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:scaleType">fitXY</item>
     </style>
+    <!--<style name="EditTextForm">-->
+        <!--<item name="android:layout_width">match_parent</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_marginLeft">@dimen/very_large_margin</item>-->
+        <!--<item name="android:layout_marginRight">@dimen/very_large_margin</item>-->
+        <!--<item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>-->
+        <!--<item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>-->
+    <!--</style>-->
 
     <style name="TextView">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/large_marge</item>
+
     </style>
+
+
 
     <style name="TextDesc">
         <item name="android:textSize">14sp</item>
@@ -53,5 +64,38 @@
         <item name="android:layout_weight">1</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
+    <style name="foto_profile">
+        <item name="android:layout_width">140px</item>
+        <item name="android:layout_height">125px</item>
+    </style>
+    <style name="jobheist">
+
+        <item name="android:textSize">
+            36sp
+        </item>
+
+        <item name="android:textColor">
+            #00A5E6
+        </item>
+
+        <item name="android:shadowColor">
+            #40000000
+        </item>
+
+        <item name="android:shadowDx">
+            0
+        </item>
+
+        <item name="android:shadowDy">
+            4
+        </item>
+
+        <item name="android:shadowRadius">
+            4
+        </item>
+
+    </style>
+
+
 
 </resources>

@@ -10,8 +10,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".pekerja.ApplyPekerjaanActivity"></activity>
+        <activity android:name=".pekerja.PostPekerjaanActivity" />
         <activity android:name=".admin.AdminHomeActivity" />
         <activity android:name=".login.LoginActivity" />
+        <activity android:name=".pekerja.PekerjaActivity" />
+        <activity android:name=".pekerja.RegisterPekerjaActivity" />
         <activity android:name=".daftar.DaftarActivity" />
         <activity android:name=".jobList.JobListActivity" />
         <activity android:name=".MainActivity">

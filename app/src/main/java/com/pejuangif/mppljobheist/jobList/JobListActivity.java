@@ -29,7 +29,7 @@ public class JobListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_joblist);
+        setContentView(R.layout.fragment_joblist_pekerja);
 
         mRecyclerView = findViewById(R.id.rv_activity_joblist);
 

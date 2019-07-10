@@ -31,7 +31,7 @@
                 android:layout_marginTop="@dimen/very_large_margin"
                 android:orientation="vertical"
                 android:layout_below="@id/iv_logo_daftar"
-                android:background="@android:color/white">
+                android:background="@drawable/border">
 
                 <Button
                     android:id="@+id/btn_daftar_pencarikerja"
@@ -43,7 +43,12 @@
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
                     android:paddingTop="@dimen/large_marge"
                     android:paddingBottom="@dimen/large_marge"
-                    android:text="@string/pencari_kerja" />
+                    android:text="@string/pencari_kerja"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/colorBlue"/>
 
                 <Button
                     android:id="@+id/btn_daftar_pemberikerja"
@@ -52,15 +57,21 @@
                     android:layout_marginLeft="@dimen/very_huge_margin"
                     android:layout_marginRight="@dimen/very_huge_margin"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:layout_marginBottom="@dimen/very_large_margin"
+                    android:layout_marginBottom="@dimen/very_huge_margin"
                     android:paddingTop="@dimen/large_marge"
                     android:paddingBottom="@dimen/large_marge"
-                    android:text="@string/pemberi_kerja" />
+                    android:text="@string/pemberi_kerja"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/colorBlue"/>
 
             </LinearLayout>
 
             <TextView
-                style="@style/TextView"
+                android:layout_width="243dp"
+                android:layout_height="wrap_content"
                 android:paddingRight="@dimen/very_large_margin"
                 android:paddingLeft="@dimen/very_large_margin"
                 android:paddingTop="@dimen/medium_margin"
@@ -71,8 +82,10 @@
                 android:textAlignment="center"
                 android:text="@string/daftar"
                 android:textSize="@dimen/medium_text"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
-                android:background="@android:color/holo_blue_bright"/>
+                android:textAllCaps="true"
+                android:background="@drawable/border"/>
 
         </RelativeLayout>
     </ScrollView>

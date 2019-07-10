@@ -10,6 +10,7 @@
 
     <ImageView
         android:id="@+id/civ_item_joblist_photo"
+        android:background="@drawable/logo"
         android:layout_width="@dimen/image_medium"
         android:layout_height="@dimen/image_medium" />
 
