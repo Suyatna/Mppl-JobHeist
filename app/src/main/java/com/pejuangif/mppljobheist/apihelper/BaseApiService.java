@@ -15,10 +15,6 @@ public interface BaseApiService {
     @POST("users/login")
     Call<Users> loginRequest(@Field("email") String email, @Field("password") String password);
 
-    @FormUrlEncoded
-    @POST("pencari_kerja/login")
-    Call<PencariKerja> loginRequest(@Field("email") String email, @Field("password") String password);
-
     @GET("jobs/")
     Call<JobListData> jobListRequest();
 }
