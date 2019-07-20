@@ -34,30 +34,30 @@
                 android:layout_below="@id/iv_logo_login"
                 android:background="@android:color/white">
 
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_nama_lengkap"
                     style="@style/EditTextForm"
                     android:hint="@string/nama_lengkap"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_email"
                     style="@style/EditTextForm"
                     android:inputType="textEmailAddress"
                     android:hint="@string/email"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_password"
                     style="@style/EditTextForm"
                     android:inputType="textPassword"
                     android:hint="@string/password"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_confirm_password"
                     style="@style/EditTextForm"
                     android:inputType="textPassword"
                     android:hint="@string/confirm_password"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_pendidikan"
                     style="@style/EditTextForm"
                     android:hint="@string/pendidikan_terakhir"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_alamat"
                     style="@style/EditTextForm"
                     android:hint="@string/alamat"
