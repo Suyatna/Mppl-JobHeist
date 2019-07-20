@@ -1,4 +1,4 @@
-package com.pejuangif.mppljobheist.pekerja;
+package com.pejuangif.mppljobheist.pekerja.fragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -21,6 +21,7 @@ import com.pejuangif.mppljobheist.jobList.JobListActivity;
 import com.pejuangif.mppljobheist.jobList.JobListAdapter;
 import com.pejuangif.mppljobheist.model.JobListData;
 import com.pejuangif.mppljobheist.model.JobLists;
+import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 
 import java.util.ArrayList;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package com.pejuangif.mppljobheist.pekerja;
+package com.pejuangif.mppljobheist.pekerja.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pejuangif.mppljobheist.R;
+import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 
 public class HistoryPekerjaFragment extends Fragment {
 

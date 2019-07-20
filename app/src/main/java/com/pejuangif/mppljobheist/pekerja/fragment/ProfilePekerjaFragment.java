@@ -1,4 +1,4 @@
-package com.pejuangif.mppljobheist.pekerja;
+package com.pejuangif.mppljobheist.pekerja.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,14 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pejuangif.mppljobheist.R;
+import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 
-public class NotifikasiPekerjaFragment extends Fragment {
+public class ProfilePekerjaFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_notifikasi_pekerja,container,false);
-        ((PekerjaActivity)getActivity()).actionbar.setTitle("Notifikasi");
-        return view;
+        ((PekerjaActivity)getActivity()).actionbar.setTitle("Profile");
+        return inflater.inflate(R.layout.fragment_profile_pekerja,container,false);
+
     }
 }
