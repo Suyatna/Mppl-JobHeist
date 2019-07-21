@@ -41,96 +41,93 @@
         </LinearLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.1dp"/>
+            android:layout_height="0.1dp"
+            android:background="@android:color/black"/>
+
         <LinearLayout
             android:id="@+id/ubah_profile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/large_marge"
+            android:layout_height="@dimen/very_huge_margin"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/large_marge">
+            android:background="@drawable/item_selected">
             <ImageView
                 style="@style/icon_image_view"
+                android:layout_marginLeft="@dimen/large_marge"
                 android:background="@drawable/ic_edit"/>
             <TextView
                 style="@style/TextView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:text="Ubah Profil" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:background="@android:color/black"
-            android:layout_marginTop="@dimen/large_marge"/>
+            android:background="@android:color/black"/>
         <LinearLayout
             android:id="@+id/help"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/large_marge"
+            android:layout_height="@dimen/very_huge_margin"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/large_marge">
+            android:background="@drawable/item_selected">
             <ImageView
                 style="@style/icon_image_view"
+                android:layout_marginLeft="@dimen/large_marge"
                 android:background="@drawable/ic_help"/>
             <TextView
                 style="@style/TextView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:text="Bantuan" />
         </LinearLayout>
-
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:background="@android:color/black"
-            android:layout_marginTop="@dimen/large_marge"/>
+            android:background="@android:color/black"/>
         <LinearLayout
             android:id="@+id/logout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/large_marge"
+            android:layout_height="@dimen/very_huge_margin"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/large_marge">
+            android:background="@drawable/item_selected">
             <ImageView
                 style="@style/icon_image_view"
+                android:layout_marginLeft="@dimen/large_marge"
                 android:background="@drawable/ic_logout"/>
             <TextView
                 style="@style/TextView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:text="Keluar" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:background="@android:color/black"
-            android:layout_marginTop="@dimen/large_marge"/>
+            android:background="@android:color/black"/>
         <LinearLayout
             android:id="@+id/about"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/large_marge"
+            android:layout_height="@dimen/very_huge_margin"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/large_marge">
+            android:background="@drawable/item_selected">
             <ImageView
                 style="@style/icon_image_view"
+                android:layout_marginLeft="@dimen/large_marge"
                 android:background="@drawable/ic_about"/>
             <TextView
                 style="@style/TextView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:text="Tentang Aplikasi" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:background="@android:color/black"
-            android:layout_marginTop="@dimen/large_marge"/>
+            android:background="@android:color/black"/>
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

@@ -37,7 +37,10 @@
                 <EditText
                     android:id="@+id/et_login_email"
                     style="@style/EditTextForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/very_huge_margin"
+                    android:background="@drawable/editext_shape"
                     android:inputType="textEmailAddress"
                     android:hint="@string/email"
                     android:importantForAutofill="no"
@@ -48,40 +51,42 @@
                     style="@style/EditTextForm"
                     android:inputType="textPassword"
                     android:hint="@string/password"
+                    android:background="@drawable/editext_shape"
                     android:importantForAutofill="no" />
 
                 <Button
                     android:id="@+id/btn_login"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/very_huge_margin"
-                    android:layout_marginRight="@dimen/very_huge_margin"
+                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/very_large_margin"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:paddingTop="@dimen/large_marge"
-                    android:paddingBottom="@dimen/large_marge"
-                    android:background="@drawable/rounded_shape"
-                    android:backgroundTint="@color/colorBlue"
+                    android:background="@drawable/button_shape"
                     android:textColor="#ffff"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:text="@string/login" />
 
                 <LinearLayout
-                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/large_marge"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/tv_login_lupapassword"
-                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/medium_margin"
                         android:text="@string/lupa_password"
                         android:textColor="@android:color/holo_blue_dark" />
 
                     <TextView
-                        style="@style/TextView"
-                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="@string/bantuan"
                         android:textStyle="bold"/>
 
@@ -90,15 +95,15 @@
             </LinearLayout>
 
             <TextView
-                style="@style/TextView"
-                android:paddingRight="@dimen/very_large_margin"
-                android:paddingLeft="@dimen/very_large_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:paddingTop="@dimen/medium_margin"
                 android:paddingBottom="@dimen/medium_margin"
+                android:paddingRight="@dimen/very_large_margin"
+                android:paddingLeft="@dimen/very_large_margin"
                 android:layout_marginTop="@dimen/medium_margin"
                 android:layout_below="@id/iv_logo_login"
                 android:layout_centerHorizontal="true"
-                android:textAlignment="center"
                 android:text="@string/login"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/medium_text"
@@ -115,13 +120,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginEnd="@dimen/medium_margin"
                     android:text="@string/belum_punya_akun" />
 
                 <TextView
                     android:id="@+id/tv_login_daftar"
-                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="@string/daftar"
                     android:textColor="@android:color/holo_blue_dark"/>
 

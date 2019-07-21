@@ -1,10 +1,13 @@
 package com.pejuangif.mppljobheist.jobList;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
@@ -25,19 +28,17 @@ public class JobListActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_joblist_pekerja);
 
         mRecyclerView = findViewById(R.id.rv_activity_joblist);
-
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         baseApiService = RetrofilClient.getClient().create(BaseApiService.class);
 
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Riwayat Pencari Kerja");
 
         mShowJobLists();
@@ -52,6 +53,7 @@ public class JobListActivity extends AppCompatActivity {
                 ArrayList<JobLists> jobListsArrayList = Objects.requireNonNull(response.body()).getJobListsArray();
                 mAdapter = new JobListAdapter(jobListsArrayList, JobListActivity.this);
                 mRecyclerView.setAdapter(mAdapter);
+               
             }
 
             @Override

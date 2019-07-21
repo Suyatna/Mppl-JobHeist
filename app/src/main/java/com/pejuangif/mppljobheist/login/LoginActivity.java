@@ -93,12 +93,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Toast.makeText(context, "Email/Password salah!", Toast.LENGTH_SHORT).show();
                     }
 
+
                     @Override
                     public void onFailure(Call<Users> call, Throwable t) {
                             Toast.makeText(context, "Koneksi Internet Bermasalah", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
+
 
     @Override
     public void onClick(View v) {

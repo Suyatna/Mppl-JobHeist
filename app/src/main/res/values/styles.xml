@@ -3,12 +3,23 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="actionBarTheme">@style/ThemeOverlay.AppTheme.ActionBar</item>
+        <!--<item name="actionBarStyle">@style/Widget.AppTheme.ActionBar</item>-->
+        <!--<item name="actionBarPopupTheme">@style/ThemeOverlay.AppTheme.PopupMenu</item>-->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat.Title">
-        <item name="android:textColor">@color/colorTitle</item>
+
+    <style name="ThemeOverlay.AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- title text color -->
+        <item name="android:textColorPrimary">@color/colorTitle</item>
+        <!-- subtitle text color -->
+        <item name="android:textColorSecondary">@color/colorSubTitle</item>
+        <!-- action menu item text color -->
+        <item name="actionMenuTextColor">@color/colorTitle</item>
+        <!-- action menu item icon color -->
+        <item name="colorControlNormal">@color/colorTitle</item>
     </style>
 
     <style name="ImageView">
@@ -95,6 +106,23 @@
         </item>
 
     </style>
+
+    <!--<style name="ThemeOverlay.AppTheme.PopupMenu" parent="ThemeOverlay.AppCompat.Dark">-->
+    <!--&lt;!&ndash; popup menu background - NEVER "android:background" !!! in themes &ndash;&gt;-->
+    <!--<item name="android:colorBackground">...</item>-->
+    <!--&lt;!&ndash; popup menu item text color &ndash;&gt;-->
+    <!--<item name="android:textColorPrimary">...</item>-->
+    <!--</style>-->
+    <!--<style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat.Title">-->
+    <!--<item name="android:textColor">@color/colorTitle</item>-->
+    <!--</style>-->
+
+    <!--<style name="Widget.AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">-->
+    <!--&lt;!&ndash; action bar background - without android prefix &ndash;&gt;-->
+    <!--<item name="background">...</item>-->
+    <!--&lt;!&ndash; action bar elevation - without android prefix &ndash;&gt;-->
+    <!--<item name="elevation">4dp</item>-->
+    <!--</style>-->
 
 
 

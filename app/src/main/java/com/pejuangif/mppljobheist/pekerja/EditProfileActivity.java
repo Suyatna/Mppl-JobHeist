@@ -8,14 +8,14 @@ import com.pejuangif.mppljobheist.R;
 
 import java.util.Objects;
 
-public class ApplyPekerjaanActivity extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apply_pekerjaan);
+        setContentView(R.layout.activity_edit_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Verifikasi");
+        getSupportActionBar().setTitle("Ubah Profil");
 
     }
 

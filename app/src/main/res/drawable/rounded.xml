@@ -3,10 +3,11 @@ android:shape="rectangle">
 
     <stroke
         android:width="1px"
-        android:color="#000"/>
+        android:color="@color/colorBlue"/>
+    <solid
+        android:color="@color/colorBlue"
+        />
 
-    <size
-        android:width="260dp" />
     <padding
         android:top="@dimen/medium_margin"
         android:bottom="@dimen/medium_margin"/>

@@ -18,7 +18,7 @@ public class AdminHomeActivity extends AppCompatActivity implements View.OnClick
 
     public static String EXTRA_ADMIN = "extra-admin";
 
-    LinearLayout linearAdminHomeRiwayat;
+    LinearLayout linearAdminHomeRiwayat,linearPemberiKerja,linearPencariKerja,linearVerivy;
     Context context;
 
     @Override
@@ -27,8 +27,15 @@ public class AdminHomeActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_admin_home);
 
         context = this;
+
         linearAdminHomeRiwayat = findViewById(R.id.linear_admin_home_riwayat);
+        linearPemberiKerja= findViewById(R.id.linear_pemberikerja);
+        linearPencariKerja= findViewById(R.id.linear_pencarikerja);
+        linearVerivy= findViewById(R.id.linear_verivy_akun);
         linearAdminHomeRiwayat.setOnClickListener(this);
+        linearPemberiKerja.setOnClickListener(this);
+        linearPencariKerja.setOnClickListener(this);
+        linearVerivy.setOnClickListener(this);
 
         Users users = getIntent().getParcelableExtra(EXTRA_ADMIN);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -43,6 +50,16 @@ public class AdminHomeActivity extends AppCompatActivity implements View.OnClick
                 Intent intent = new Intent(context, JobListActivity.class);
                 context.startActivity(intent);
                 break;
+            case R.id.linear_pemberikerja:
+
+                break;
+            case R.id.linear_pencarikerja:
+
+                break;
+            case R.id.linear_verivy_akun:
+
+                break;
+
         }
     }
 
