@@ -86,7 +86,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                             Intent intent = new Intent(context, AdminHomeActivity.class);
                             intent.putExtra(AdminHomeActivity.EXTRA_ADMIN, users);
-
                             context.startActivity(intent);
                         }
                         else
