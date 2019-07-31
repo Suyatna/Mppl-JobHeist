@@ -30,7 +30,8 @@
                 tools:text="Judul Posting"
                 android:textSize="22sp"
                 android:layout_marginLeft="@dimen/large_marge"
-                android:layout_marginTop="@dimen/large_marge" />
+                android:layout_marginTop="@dimen/large_marge"
+                android:textFontWeight="500"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,7 +85,5 @@
                 android:textColor="@android:color/white"/>
 
         </LinearLayout>
-
     </ScrollView>
-
 </RelativeLayout>

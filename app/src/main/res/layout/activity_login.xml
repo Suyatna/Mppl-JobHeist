@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:gravity="center"
-                android:padding="@dimen/large_marge"
+                android:padding="@dimen/medium_margin"
                 android:background="@android:color/white"
                 android:orientation="horizontal">
 

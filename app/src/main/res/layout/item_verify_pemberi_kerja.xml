@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linear_item_verify_pemberi_kerja"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_verify_item_pemberikerja_foto"
+        android:background="@drawable/foto_profile"
+        android:layout_width="@dimen/image_medium"
+        android:layout_height="@dimen/image_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_verify_item_pemberikerja_name"
+            style="@style/TextDesc.Value"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/medium_text"
+            tools:text="Nama" />
+        <ImageButton
+            android:id="@+id/ib_verify_accept_akun_pemberikerja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_24dp"
+            />
+        <ImageButton
+            android:id="@+id/ib_verify_reject_akun_pemberikerja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_24dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swiperefresh_verify_pencarikerja"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.VerifyAkunPencariKerjaActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list_verify_pencarikerja"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_verify_pencari_kerja">
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundLayout"
-    tools:context=".daftar.DaftarActivity">
+    tools:context=".admin.VerifyAkunActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:background="@drawable/border">
 
                 <Button
-                    android:id="@+id/btn_daftar_pencarikerja"
+                    android:id="@+id/btn_verify_pencarikerja"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/very_huge_margin"
@@ -50,7 +50,7 @@
                     android:background="@drawable/button_shape"/>
 
                 <Button
-                    android:id="@+id/btn_daftar_pemberikerja"
+                    android:id="@+id/btn_verify_pemberikerja"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/very_huge_margin"
@@ -78,11 +78,10 @@
                 android:layout_below="@id/iv_logo_daftar"
                 android:layout_centerHorizontal="true"
                 android:textAlignment="center"
-                android:text="@string/daftar"
+                android:text="@string/verify_akun"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
-                android:textAllCaps="true"
                 android:background="@drawable/border"/>
 
         </RelativeLayout>
