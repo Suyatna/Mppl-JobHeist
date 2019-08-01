@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MPPL JobHeist</string>
+    <string name="app_name">JobHeist</string>
     <string name="jobheist">Job Heist</string>
     <string name="login">Login</string>
     <string name="password">Password</string>

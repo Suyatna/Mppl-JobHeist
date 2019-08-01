@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pemberikerja.EditProfilePemberiKerjaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAccent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/foto_profile"
+            app:civ_border_color="@android:color/black"
+            app:civ_border_width="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/large_marge"
+            android:layout_marginBottom="@dimen/large_marge"/>
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_daftar_nama_lengkap"
+        style="@style/EditTextForm"
+        android:hint="@string/nama_lengkap"/>
+    <EditText
+        android:id="@+id/et_daftar_email"
+        style="@style/EditTextForm"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"/>
+    <EditText
+        android:id="@+id/et_daftar_pendidikan"
+        style="@style/EditTextForm"
+        android:hint="@string/pendidikan_terakhir"/>
+    <EditText
+        android:id="@+id/et_daftar_alamat"
+        style="@style/EditTextForm"
+        android:hint="@string/alamat"
+        android:layout_marginBottom="@dimen/large_marge"/>
+    <Button
+        android:id="@+id/btn_ubah_pemberikerja"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:padding="@dimen/medium_margin"
+        android:background="@drawable/button_rounded_shape"
+        android:textColor="#e5e5e5"
+        android:text="Ubah"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+</LinearLayout>

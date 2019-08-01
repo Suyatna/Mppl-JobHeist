@@ -13,6 +13,13 @@ public class PencariKerja extends Users implements Parcelable {
 
     }
 
+    public PencariKerja(int id, String name, String email, String generate_token) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.generate_token = generate_token;
+    }
+
     public int getId() {
         return id;
     }

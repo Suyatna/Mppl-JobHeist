@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/home_menu"
+        android:title="Pekerjaan"
+        app:showAsAction="withText"
+        android:icon="@drawable/ic_portfolio_black"/>
+
+
+    <item
+        android:id="@+id/notif_menu"
+        android:title="Posting"
+        app:showAsAction="withText"
+        android:icon="@drawable/ic_schedule_black_24dp"/>
+
+    <item
+        android:id="@+id/riwayat_menu"
+        android:title="Respond"
+        app:showAsAction="withText"
+        android:icon="@drawable/ic_library_books_black_24dp"/>
+
+    <item
+        android:id="@+id/profil_menu"
+        android:title="Saya"
+        app:showAsAction="withText"
+        android:icon="@drawable/ic_user"/>
+
+</menu>

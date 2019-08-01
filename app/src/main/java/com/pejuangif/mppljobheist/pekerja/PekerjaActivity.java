@@ -10,22 +10,27 @@ import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
 import com.pejuangif.mppljobheist.R;
+import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.pekerja.fragment.HistoryPekerjaFragment;
-import com.pejuangif.mppljobheist.pekerja.fragment.JobListFragment;
+import com.pejuangif.mppljobheist.pekerja.fragment.JobListPekerjaFragment;
 import com.pejuangif.mppljobheist.pekerja.fragment.NotifikasiPekerjaFragment;
+import com.pejuangif.mppljobheist.pemberikerja.fragment.JobListPekerjaanFragment;
 import com.pejuangif.mppljobheist.pekerja.fragment.ProfilePekerjaFragment;
 
 public class PekerjaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    public static String EXTRA_ADMIN = "extra-admin";
     private RelativeLayout layout;
     public ActionBar actionbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pekerja);
         actionbar = getSupportActionBar();
 
+        Users users = getIntent().getParcelableExtra(EXTRA_ADMIN);
 
-        loadFragment(new JobListFragment());
+        loadFragment(new JobListPekerjaanFragment());
         // inisialisasi BottomNavigaionView
         BottomNavigationView bottomNavigationView = findViewById(R.id.bn_main);
         // beri listener pada saat item/menu bottomnavigation terpilih
@@ -49,7 +54,7 @@ public class PekerjaActivity extends AppCompatActivity implements BottomNavigati
         Fragment fragment = null;
         switch (menuItem.getItemId()){
             case R.id.home_menu:
-                fragment = new JobListFragment();
+                fragment = new JobListPekerjaFragment();
                 break;
             case R.id.notif_menu:
                 fragment = new NotifikasiPekerjaFragment();

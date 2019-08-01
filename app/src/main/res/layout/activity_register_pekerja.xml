@@ -34,30 +34,30 @@
                 android:layout_below="@id/iv_logo_login"
                 android:background="@android:color/white">
 
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_nama_lengkap"
                     style="@style/EditTextForm"
                     android:hint="@string/nama_lengkap"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_email"
                     style="@style/EditTextForm"
                     android:inputType="textEmailAddress"
                     android:hint="@string/email"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_password"
                     style="@style/EditTextForm"
                     android:inputType="textPassword"
                     android:hint="@string/password"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_confirm_password"
                     style="@style/EditTextForm"
                     android:inputType="textPassword"
                     android:hint="@string/confirm_password"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_pendidikan"
                     style="@style/EditTextForm"
                     android:hint="@string/pendidikan_terakhir"/>
-                <TextView
+                <EditText
                     android:id="@+id/et_daftar_alamat"
                     style="@style/EditTextForm"
                     android:hint="@string/alamat"
@@ -77,9 +77,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="70dp"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:paddingTop="@dimen/large_marge"
-                android:paddingBottom="@dimen/large_marge"
-                android:background="@drawable/rounded_shape"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingBottom="@dimen/medium_margin"
+                android:background="@drawable/button_rounded_shape"
                 android:backgroundTint="#000"
                 android:textColor="#e5e5e5"
                 android:text="Daftar"
