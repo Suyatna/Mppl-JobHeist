@@ -1,19 +1,17 @@
-package com.pejuangif.mppljobheist.pekerja;
+package com.pejuangif.mppljobheist.pemberikerja;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.pejuangif.mppljobheist.R;
 
-import java.util.Objects;
-
-public class EditProfileActivity extends AppCompatActivity {
+public class EditProfilePemberiKerjaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_profile);
+        setContentView(R.layout.activity_edit_profile_pekerja);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Ubah Profil");
 

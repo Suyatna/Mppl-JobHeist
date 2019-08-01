@@ -18,6 +18,7 @@ import com.pejuangif.mppljobheist.apihelper.BaseApiService;
 import com.pejuangif.mppljobheist.apihelper.UtilsApi;
 import com.pejuangif.mppljobheist.daftar.DaftarActivity;
 import com.pejuangif.mppljobheist.model.Users;
+import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 
 import java.util.Objects;
 
@@ -84,9 +85,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             users.setEmail(usersData.getEmail());
                             users.setGenerate_token(usersData.getGenerate_token());
 
-                            Intent intent = new Intent(context, AdminHomeActivity.class);
-                            intent.putExtra(AdminHomeActivity.EXTRA_ADMIN, users);
-
+                            Intent intent = new Intent(context, PekerjaActivity.class);
+                            intent.putExtra(PekerjaActivity.EXTRA_ADMIN, users);
                             context.startActivity(intent);
                         }
                         else

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".pekerja.EditProfileActivity">
+    tools:context=".pemberikerja.EditProfilePemberiKerjaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:hint="@string/alamat"
         android:layout_marginBottom="@dimen/large_marge"/>
     <Button
-        android:id="@+id/btn_daftar_pencarikerja"
+        android:id="@+id/btn_ubah_pemberikerja"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

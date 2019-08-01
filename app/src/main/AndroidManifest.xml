@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".admin.ListPemberiKerjaActivity"/>
         <activity android:name=".admin.VerifyAkunPencariKerjaActivity" />
-        <activity android:name=".pekerja.EditProfileActivity" />
+        <activity android:name=".pekerja.EditProfilePekerjaActivity" />
         <activity android:name=".pekerja.SuksesApplyPekerjaanActivity" />
         <activity android:name=".pekerja.ApplyPekerjaanActivity" />
         <activity android:name=".pekerja.PostPekerjaanActivity" />

@@ -1,7 +1,5 @@
 package com.pejuangif.mppljobheist.pekerja.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -18,12 +16,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
 import com.pejuangif.mppljobheist.apihelper.RetrofilClient;
-import com.pejuangif.mppljobheist.jobList.JobListActivity;
 import com.pejuangif.mppljobheist.jobList.JobListAdapter;
 import com.pejuangif.mppljobheist.model.JobListData;
 import com.pejuangif.mppljobheist.model.JobLists;
@@ -36,7 +32,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class JobListFragment extends Fragment {
+public class JobListPekerjaFragment extends Fragment {
     private BaseApiService baseApiService;
     private SearchView searchView;
     private RecyclerView mRecyclerView;
@@ -46,7 +42,7 @@ public class JobListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_joblist_pekerja,container,false);
+        View view = inflater.inflate(R.layout.fragment_joblist,container,false);
         ((PekerjaActivity)getActivity()).actionbar.setTitle("List Pekerjaan");
         setHasOptionsMenu(true);
 

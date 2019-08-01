@@ -1,13 +1,10 @@
 package com.pejuangif.mppljobheist.jobList;
 
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
@@ -31,7 +28,7 @@ public class JobListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_joblist_pekerja);
+        setContentView(R.layout.fragment_joblist);
 
         mRecyclerView = findViewById(R.id.rv_activity_joblist);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);

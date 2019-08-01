@@ -1,4 +1,4 @@
-package com.pejuangif.mppljobheist.pekerja;
+package com.pejuangif.mppljobheist.pemberikerja;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,25 +10,21 @@ import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
 import com.pejuangif.mppljobheist.R;
-import com.pejuangif.mppljobheist.model.Users;
-import com.pejuangif.mppljobheist.pekerja.fragment.HistoryPekerjaFragment;
-import com.pejuangif.mppljobheist.pekerja.fragment.JobListPekerjaFragment;
-import com.pejuangif.mppljobheist.pekerja.fragment.NotifikasiPekerjaFragment;
 import com.pejuangif.mppljobheist.pemberikerja.fragment.JobListPekerjaanFragment;
+import com.pejuangif.mppljobheist.pemberikerja.fragment.PostingPekerjaanFragment;
+import com.pejuangif.mppljobheist.pemberikerja.fragment.ProfilePemberiKerjaFragment;
+import com.pejuangif.mppljobheist.pemberikerja.fragment.ResponPekerjaanFragment;
 import com.pejuangif.mppljobheist.pekerja.fragment.ProfilePekerjaFragment;
 
-public class PekerjaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    public static String EXTRA_ADMIN = "extra-admin";
+public class PemberiKerjaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private RelativeLayout layout;
     public ActionBar actionbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pekerja);
+        setContentView(R.layout.activity_pemberi_kerja);
         actionbar = getSupportActionBar();
 
-        Users users = getIntent().getParcelableExtra(EXTRA_ADMIN);
 
         loadFragment(new JobListPekerjaanFragment());
         // inisialisasi BottomNavigaionView
@@ -54,16 +50,16 @@ public class PekerjaActivity extends AppCompatActivity implements BottomNavigati
         Fragment fragment = null;
         switch (menuItem.getItemId()){
             case R.id.home_menu:
-                fragment = new JobListPekerjaFragment();
+                fragment = new JobListPekerjaanFragment();
                 break;
             case R.id.notif_menu:
-                fragment = new NotifikasiPekerjaFragment();
+                fragment = new PostingPekerjaanFragment();
                 break;
             case R.id.riwayat_menu:
-                fragment = new HistoryPekerjaFragment();
+                fragment = new ResponPekerjaanFragment();
                 break;
             case R.id.profil_menu:
-                fragment = new ProfilePekerjaFragment();
+                fragment = new ProfilePemberiKerjaFragment();
                 break;
 
         }
