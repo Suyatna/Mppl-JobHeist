@@ -2,7 +2,6 @@ package com.pejuangif.mppljobheist.apihelper;
 
 import com.pejuangif.mppljobheist.model.JobListData;
 import com.pejuangif.mppljobheist.model.Users;
-import com.pejuangif.mppljobheist.model.PencariKerja;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -19,6 +18,10 @@ public interface BaseApiService {
     @FormUrlEncoded
     @POST("users/registerPencariKerja")
     Call<Users> registerPencariKerja(@Field("name") String name, @Field("email") String email, @Field("password") String password, @Field("pendidikan_terakhir") String pendidikan_terakhir, @Field("alamat") String alamat);
+
+    @FormUrlEncoded
+    @POST("users/registerPemberiKerja")
+    Call<Users> registerPemberiKerja(@Field("name") String name, @Field("email") String email, @Field("password") String password, @Field("nama_perusahaan") String nama_perusahaan, @Field("alamat") String alamat);
 
     @GET("jobs/")
     Call<JobListData> jobListRequest();

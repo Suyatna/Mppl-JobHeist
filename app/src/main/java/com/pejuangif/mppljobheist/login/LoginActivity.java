@@ -17,8 +17,10 @@ import com.pejuangif.mppljobheist.admin.AdminHomeActivity;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
 import com.pejuangif.mppljobheist.apihelper.UtilsApi;
 import com.pejuangif.mppljobheist.daftar.DaftarActivity;
+import com.pejuangif.mppljobheist.model.PencariKerja;
 import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
+import com.pejuangif.mppljobheist.pemberikerja.PemberiKerjaActivity;
 
 import java.util.Objects;
 
@@ -84,10 +86,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             users.setName(usersData.getName());
                             users.setEmail(usersData.getEmail());
                             users.setGenerate_token(usersData.getGenerate_token());
+                            users.setAlamat(usersData.getAlamat());
+                            users.setAvatar(usersData.getAvatar());
+                            users.setPendidikan_terakhir(usersData.getPendidikan_terakhir());
+                            users.setCv(usersData.getCv());
+                            users.setLevelUsers(usersData.getLevelUsers());
 
-                            Intent intent = new Intent(context, PekerjaActivity.class);
-                            intent.putExtra(PekerjaActivity.EXTRA_ADMIN, users);
-                            context.startActivity(intent);
+                            if (usersData.getLevelUsers().equals("admin")) {
+                                Intent admin = new Intent(context, AdminHomeActivity.class);
+                                admin.putExtra(AdminHomeActivity.EXTRA_ADMIN, users);
+                                context.startActivity(admin);
+                            }
+                            else if (usersData.getLevelUsers().equals("pencari_kerja")) {
+                                Intent pencari_kerja = new Intent(context, PekerjaActivity.class);
+                                pencari_kerja.putExtra(PencariKerja.EXTRA_PENCARI_KERJA, users);
+                                context.startActivity(pencari_kerja);
+                            }
+                            else if (usersData.getLevelUsers().equals("pemberi_kerja")) {
+                                Intent pemberi_kerja = new Intent(context, PemberiKerjaActivity.class);
+                                pemberi_kerja.putExtra(PemberiKerjaActivity.EXTRA_PEMBERI_KERJA, users);
+                                context.startActivity(pemberi_kerja);
+                            }
                         }
                         else
                             if (response.message().equals("Email tidak ditemukan"))

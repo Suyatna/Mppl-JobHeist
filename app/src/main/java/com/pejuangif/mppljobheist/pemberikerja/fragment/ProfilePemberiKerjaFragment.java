@@ -9,23 +9,32 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.pejuangif.mppljobheist.MainActivity;
 import com.pejuangif.mppljobheist.R;
-import com.pejuangif.mppljobheist.pekerja.EditProfilePekerjaActivity;
-import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
+import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.pemberikerja.EditProfilePemberiKerjaActivity;
+import com.pejuangif.mppljobheist.pemberikerja.PemberiKerjaActivity;
 
 public class ProfilePemberiKerjaFragment extends Fragment implements View.OnClickListener {
+    public static String EXTRA_PEMBERI_KERJA = "extra-pemberi-kerja";
     LinearLayout ubahprofil,bantuan,keluar,tentangaplikasi;
+    TextView tvname;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view=inflater.inflate(R.layout.fragment_profile_pemberi_kerja,container,false);
-        ((PekerjaActivity)getActivity()).actionbar.setTitle("Profile");
+        ((PemberiKerjaActivity)getActivity()).actionbar.setTitle("Profile");
+        Users users = ((PemberiKerjaActivity)getActivity()).getIntent().getParcelableExtra(EXTRA_PEMBERI_KERJA);
+        tvname= view.findViewById(R.id.tv_profile_name);
         ubahprofil=view.findViewById(R.id.ubah_profile);
         bantuan=view.findViewById(R.id.help);
         keluar=view.findViewById(R.id.logout);
         tentangaplikasi=view.findViewById(R.id.about);
+
+        tvname.setText(users.getName());
         ubahprofil.setOnClickListener(this);
         bantuan.setOnClickListener(this);
         keluar.setOnClickListener(this);
@@ -37,16 +46,18 @@ public class ProfilePemberiKerjaFragment extends Fragment implements View.OnClic
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
             case R.id.ubah_profile:
-                Intent intent=new Intent(getContext(), EditProfilePemberiKerjaActivity.class);
+                intent=new Intent(getContext(),EditProfilePemberiKerjaActivity.class);
                 startActivity(intent);
                 break;
             case R.id.help:
 
                 break;
             case R.id.logout:
-
+                intent=new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.about:
 

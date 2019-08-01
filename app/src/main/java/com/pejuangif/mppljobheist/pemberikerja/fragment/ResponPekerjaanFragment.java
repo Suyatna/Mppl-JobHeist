@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pejuangif.mppljobheist.R;
-import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
+import com.pejuangif.mppljobheist.pemberikerja.PemberiKerjaActivity;
 
 public class ResponPekerjaanFragment extends Fragment {
 
@@ -17,7 +17,7 @@ public class ResponPekerjaanFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_respond_pekerjaan,container,false);
-        ((PekerjaActivity)getActivity()).actionbar.setTitle("Lihat Respond");
+        ((PemberiKerjaActivity)getActivity()).actionbar.setTitle("Lihat Respond");
         return view;
     }
 }

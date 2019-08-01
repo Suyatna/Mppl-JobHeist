@@ -26,6 +26,7 @@
             android:layout_marginBottom="@dimen/large_marge"/>
 
     </LinearLayout>
+
     <EditText
         android:id="@+id/et_daftar_nama_lengkap"
         style="@style/EditTextForm"
@@ -38,7 +39,7 @@
     <EditText
         android:id="@+id/et_daftar_pendidikan"
         style="@style/EditTextForm"
-        android:hint="@string/pendidikan_terakhir"/>
+        android:hint="Perusahaan/Jenis Usaha"/>
     <EditText
         android:id="@+id/et_daftar_alamat"
         style="@style/EditTextForm"

@@ -4,6 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PencariKerja extends Users implements Parcelable {
+    public static String EXTRA_PENCARI_KERJA = "extra-pencari-kerja";
+
     private int id;
     private String name;
     private String email;

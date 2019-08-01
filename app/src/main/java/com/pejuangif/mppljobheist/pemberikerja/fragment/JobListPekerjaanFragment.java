@@ -23,7 +23,7 @@ import com.pejuangif.mppljobheist.apihelper.RetrofilClient;
 import com.pejuangif.mppljobheist.jobList.JobListAdapter;
 import com.pejuangif.mppljobheist.model.JobListData;
 import com.pejuangif.mppljobheist.model.JobLists;
-import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
+import com.pejuangif.mppljobheist.pemberikerja.PemberiKerjaActivity;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public class JobListPekerjaanFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_joblist,container,false);
-        ((PekerjaActivity)getActivity()).actionbar.setTitle("List Pekerjaan");
+        ((PemberiKerjaActivity)getActivity()).actionbar.setTitle("List Pekerjaan");
         setHasOptionsMenu(true);
 
         mySwipeRefreshLayout= view.findViewById(R.id.swiperefresh);
@@ -78,7 +78,7 @@ public class JobListPekerjaanFragment extends Fragment {
         menu.clear();
         inflater.inflate(R.menu.menu_search,menu);
         MenuItem item=menu.findItem(R.id.action_search);
-        searchView=new  SearchView(((PekerjaActivity) getActivity()).getSupportActionBar().getThemedContext());
+        searchView=new  SearchView(((PemberiKerjaActivity) getActivity()).getSupportActionBar().getThemedContext());
         MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW | MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
         MenuItemCompat.setActionView(item, searchView);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

@@ -20,6 +20,8 @@
         <activity android:name=".pekerja.PekerjaActivity" />
         <activity android:name=".pekerja.RegisterPekerjaActivity" />
         <activity android:name=".pemberikerja.RegisterPemberiKerjaActivity" />
+        <activity android:name=".pemberikerja.PemberiKerjaActivity" />
+        <activity android:name=".pemberikerja.EditProfilePemberiKerjaActivity"/>
         <activity android:name=".admin.AdminHomeActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".daftar.DaftarActivity" />

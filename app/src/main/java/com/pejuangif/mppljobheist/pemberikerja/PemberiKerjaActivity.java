@@ -14,9 +14,10 @@ import com.pejuangif.mppljobheist.pemberikerja.fragment.JobListPekerjaanFragment
 import com.pejuangif.mppljobheist.pemberikerja.fragment.PostingPekerjaanFragment;
 import com.pejuangif.mppljobheist.pemberikerja.fragment.ProfilePemberiKerjaFragment;
 import com.pejuangif.mppljobheist.pemberikerja.fragment.ResponPekerjaanFragment;
-import com.pejuangif.mppljobheist.pekerja.fragment.ProfilePekerjaFragment;
 
 public class PemberiKerjaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    public static String EXTRA_PEMBERI_KERJA = "extra-pemberi-kerja";
+
     private RelativeLayout layout;
     public ActionBar actionbar;
     @Override

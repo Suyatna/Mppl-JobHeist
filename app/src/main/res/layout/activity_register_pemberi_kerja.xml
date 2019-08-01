@@ -34,35 +34,35 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/et_daftar_nama_lengkap"
+                    android:id="@+id/et_daftar_nama_lengkap_pemberikerja"
                     style="@style/EditTextForm"
                     android:hint="@string/nama_lengkap" />
 
                 <EditText
-                    android:id="@+id/et_daftar_email"
+                    android:id="@+id/et_daftar_email_pemberikerja"
                     style="@style/EditTextForm"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress" />
 
                 <EditText
-                    android:id="@+id/et_daftar_password"
+                    android:id="@+id/et_daftar_password_pemberikerja"
                     style="@style/EditTextForm"
                     android:hint="@string/password"
                     android:inputType="textPassword" />
 
                 <EditText
-                    android:id="@+id/et_daftar_confirm_password"
+                    android:id="@+id/et_daftar_confirm_password_pemberikerja"
                     style="@style/EditTextForm"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword" />
 
                 <EditText
-                    android:id="@+id/et_daftar_perusahaan"
+                    android:id="@+id/et_daftar_perusahaan_pemberikerja"
                     style="@style/EditTextForm"
                     android:hint="Perusahaan/Jenis Usaha" />
 
                 <EditText
-                    android:id="@+id/et_daftar_alamat"
+                    android:id="@+id/et_daftar_alamat_pemberikerja"
                     style="@style/EditTextForm"
                     android:layout_marginBottom="@dimen/large_marge"
                     android:hint="@string/alamat" />

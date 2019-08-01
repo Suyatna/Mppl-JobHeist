@@ -6,13 +6,15 @@ import android.view.MenuItem;
 
 import com.pejuangif.mppljobheist.R;
 
+import java.util.Objects;
+
 public class EditProfilePemberiKerjaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_profile_pekerja);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_edit_profile_pemberi_kerja);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Ubah Profil");
 
     }
