@@ -7,16 +7,15 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
 
 import com.pejuangif.mppljobheist.model.Users;
-import com.pejuangif.mppljobheist.pekerja.fragment.JobListPekerjaFragment;
-import com.pejuangif.mppljobheist.pemberikerja.fragment.JobListPekerjaanFragment;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    public static String EXTRA_ADMIN = "extra-admin";
-    private RelativeLayout layout;
     public ActionBar actionbar;
+
+    private ArrayList<Users> usersArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +23,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
         actionbar = getSupportActionBar();
 
-        Users users = getIntent().getParcelableExtra(EXTRA_ADMIN);
-
         loadFragment(new JobListFragment());
         // inisialisasi BottomNavigaionView
         BottomNavigationView bottomNavigationView = findViewById(R.id.bn_main);
         // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-
-
     }
 
     private boolean loadFragment(Fragment fragment) {

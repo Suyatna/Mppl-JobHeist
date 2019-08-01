@@ -16,14 +16,14 @@
 
         <!--Containt Main-->
         <FrameLayout
-            android:id="@+id/fl_container"
+            android:id="@+id/fl_container_pemberi_kerja"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/bn_main"
+            android:layout_above="@id/bn_main_pemberi_kerja"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
         <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bn_main"
+            android:id="@+id/bn_main_pemberi_kerja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -31,7 +31,7 @@
             android:background="@color/colorPrimary"
             app:itemIconTint="@drawable/state_bnve"
             app:itemTextColor="@drawable/state_bnve"
-            app:menu="@menu/bottom_navigation_menu_pencari_kerja" />
+            app:menu="@menu/bottom_navigation_menu_pemberi_kerja" />
 
     </RelativeLayout>
 

@@ -48,7 +48,7 @@ public class JobListActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<JobListData> call, Response<JobListData> response) {
                 ArrayList<JobLists> jobListsArrayList = Objects.requireNonNull(response.body()).getJobListsArray();
-                mAdapter = new JobListAdapter(jobListsArrayList, JobListActivity.this);
+                mAdapter = new JobListAdapter(jobListsArrayList, JobListActivity.this, null);
                 mRecyclerView.setAdapter(mAdapter);
                
             }

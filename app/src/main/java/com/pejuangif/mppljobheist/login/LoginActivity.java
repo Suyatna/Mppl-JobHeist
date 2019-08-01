@@ -17,7 +17,6 @@ import com.pejuangif.mppljobheist.admin.AdminHomeActivity;
 import com.pejuangif.mppljobheist.apihelper.BaseApiService;
 import com.pejuangif.mppljobheist.apihelper.UtilsApi;
 import com.pejuangif.mppljobheist.daftar.DaftarActivity;
-import com.pejuangif.mppljobheist.model.PencariKerja;
 import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 import com.pejuangif.mppljobheist.pemberikerja.PemberiKerjaActivity;
@@ -33,7 +32,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText email;
     private EditText password;
     private Button btnLogin;
-
     private Context context;
     private BaseApiService baseApiService;
 
@@ -99,7 +97,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             }
                             else if (usersData.getLevelUsers().equals("pencari_kerja")) {
                                 Intent pencari_kerja = new Intent(context, PekerjaActivity.class);
-                                pencari_kerja.putExtra(PencariKerja.EXTRA_PENCARI_KERJA, users);
+                                pencari_kerja.putExtra(PekerjaActivity.EXTRA_PEKERJA, users);
                                 context.startActivity(pencari_kerja);
                             }
                             else if (usersData.getLevelUsers().equals("pemberi_kerja")) {

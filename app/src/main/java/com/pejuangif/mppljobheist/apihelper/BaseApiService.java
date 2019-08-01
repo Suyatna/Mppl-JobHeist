@@ -25,4 +25,10 @@ public interface BaseApiService {
 
     @GET("jobs/")
     Call<JobListData> jobListRequest();
+
+    @GET("users/")
+    Call<Users> usersListRequest();
+
+    @POST("users/logout")
+    Call<Users> logout();
 }

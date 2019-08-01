@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.model.JobLists;
+import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.pekerja.PostPekerjaanActivity;
 
 import java.util.ArrayList;
@@ -21,13 +22,15 @@ import java.util.ArrayList;
 public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListHolder> {
 
     private final ArrayList<JobLists> mJobListArray;
+    private final Users users;
     private Context context;
 
     private ArrayList<JobLists> mGetScoutRegimentArray() {return  mJobListArray;}
 
-    public JobListAdapter(ArrayList<JobLists> mJobListArray, Context context) {
+    public JobListAdapter(ArrayList<JobLists> mJobListArray, Context context, Users users) {
         this.mJobListArray = mJobListArray;
         this.context = context;
+        this.users = users;
     }
 
     @NonNull
@@ -47,8 +50,11 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobListH
         jobListHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Users data = users;
+
                 Intent intent = new Intent(context, PostPekerjaanActivity.class);
                 intent.putExtra("pekerjaan", jobLists);
+                intent.putExtra("users", data);
                 context.startActivity(intent);
             }
         });

@@ -1,7 +1,7 @@
 package com.pejuangif.mppljobheist.admin;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.pejuangif.mppljobheist.R;
@@ -19,9 +19,10 @@ public class ListPemberiKerjaActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("List Daftar Pemberi Kerja");
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.home){
+        if(item.getItemId() == R.id.home){
             onBackPressed();
             return true;
         }

@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +12,6 @@ import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -23,6 +21,7 @@ import com.pejuangif.mppljobheist.apihelper.RetrofilClient;
 import com.pejuangif.mppljobheist.jobList.JobListAdapter;
 import com.pejuangif.mppljobheist.model.JobListData;
 import com.pejuangif.mppljobheist.model.JobLists;
+import com.pejuangif.mppljobheist.model.Users;
 import com.pejuangif.mppljobheist.pekerja.PekerjaActivity;
 
 import java.util.ArrayList;
@@ -39,12 +38,16 @@ public class JobListPekerjaFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private SwipeRefreshLayout mySwipeRefreshLayout;
 
+    private Users users;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_joblist,container,false);
         ((PekerjaActivity)getActivity()).actionbar.setTitle("List Pekerjaan");
         setHasOptionsMenu(true);
+
+        users = ((PekerjaActivity)getActivity()).getIntent().getParcelableExtra(PekerjaActivity.EXTRA_PEKERJA);
 
         mySwipeRefreshLayout= view.findViewById(R.id.swiperefresh);
         mRecyclerView = view.findViewById(R.id.rv_activity_joblist);
@@ -77,10 +80,7 @@ public class JobListPekerjaFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
         inflater.inflate(R.menu.menu_search,menu);
-        MenuItem item=menu.findItem(R.id.action_search);
-        searchView=new  SearchView(((PekerjaActivity) getActivity()).getSupportActionBar().getThemedContext());
-        MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW | MenuItemCompat.SHOW_AS_ACTION_IF_ROOM);
-        MenuItemCompat.setActionView(item, searchView);
+        searchView = new  SearchView(((PekerjaActivity) getActivity()).getSupportActionBar().getThemedContext());
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -92,6 +92,7 @@ public class JobListPekerjaFragment extends Fragment {
                 return false;
             }
         });
+
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,8 +107,9 @@ public class JobListPekerjaFragment extends Fragment {
         jobListDataCall.enqueue(new Callback<JobListData>() {
             @Override
             public void onResponse(Call<JobListData> call, Response<JobListData> response) {
+
                 ArrayList<JobLists> jobListsArrayList = Objects.requireNonNull(response.body()).getJobListsArray();
-                mAdapter = new JobListAdapter(jobListsArrayList, getContext());
+                mAdapter = new JobListAdapter(jobListsArrayList, getContext(), users);
                 mRecyclerView.setAdapter(mAdapter);
             }
 
@@ -117,6 +119,4 @@ public class JobListPekerjaFragment extends Fragment {
             }
         });
     }
-
-
 }

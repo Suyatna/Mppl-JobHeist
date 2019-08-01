@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
 
 import com.pejuangif.mppljobheist.R;
 import com.pejuangif.mppljobheist.pemberikerja.fragment.JobListPekerjaanFragment;
@@ -17,19 +16,17 @@ import com.pejuangif.mppljobheist.pemberikerja.fragment.ResponPekerjaanFragment;
 
 public class PemberiKerjaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     public static String EXTRA_PEMBERI_KERJA = "extra-pemberi-kerja";
-
-    private RelativeLayout layout;
     public ActionBar actionbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pemberi_kerja);
         actionbar = getSupportActionBar();
 
-
         loadFragment(new JobListPekerjaanFragment());
         // inisialisasi BottomNavigaionView
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bn_main);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bn_main_pemberi_kerja);
         // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
@@ -39,7 +36,7 @@ public class PemberiKerjaActivity extends AppCompatActivity implements BottomNav
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fl_container, fragment)
+                    .replace(R.id.fl_container_pemberi_kerja, fragment)
                     .commit();
             return true;
         }
